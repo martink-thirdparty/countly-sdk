@@ -1,0 +1,16 @@
+node_modules
+countly.deviceid
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.sdf
+*.opensdf
+*.v12.suo
+*.sqlite
+*.sqlite-journal
+/Debug
+/Release
+/out
+/Makefile
+/*.Makefile
+/*.target.mk
