@@ -1,6 +1,9 @@
-[submodule "vendor/gyp"]
-	path = vendor/gyp
-	url = https://chromium.googlesource.com/external/gyp
-[submodule "vendor/styleguide"]
-	path = vendor/styleguide
-	url = https://github.com/google/styleguide
+[submodule "vendor/sqlite"]
+	path = vendor/sqlite
+	url = https://github.com/azadkuh/sqlite-amalgamation.git
+[submodule "vendor/doctest"]
+	path = vendor/doctest
+	url = https://github.com/onqtam/doctest.git
+[submodule "vendor/json"]
+	path = vendor/json
+	url = https://github.com/nlohmann/json.git
