@@ -5,6 +5,8 @@ cmake -DBUILD_SHARED_LIBS:BOOL="0"  -DCMAKE_INSTALL_PREFIX:PATH="%MkBuildPath%\o
 cmake --build %MkBuildPath%\intermediate\countly_sdk --config Release
 rem does nothing: cmake --install %MkBuildPath%\intermediate\countly_sdk --config Release
 
-robocopy %~dp0\vanilla\include "%MkBuildPath%\output\Release Lib\x86\countly_sdk\include" /MIR
+robocopy vanilla\include "%MkBuildPath%\output\Release Lib\x86\countly_sdk\include" /MIR
 mkdir "%MkBuildPath%\output\Release Lib\x86\countly_sdk\lib"
 copy %MkBuildPath%\intermediate\countly_sdk\Release\countly.lib "%MkBuildPath%\output\Release Lib\x86\countly_sdk\lib"
+
+robocopy vanilla\vendor\json\include\nlohmann "%MkBuildPath%\output\Release Lib\x86\countly_sdk\include\nlohmann" /MIR
