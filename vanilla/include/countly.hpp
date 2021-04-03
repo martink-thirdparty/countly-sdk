@@ -140,7 +140,7 @@ public:
 	void SetPath(const std::string& path) {
 #ifdef COUNTLY_USE_SQLITE
 		setDatabasePath(path);
-#else
+#elif defined _WIN32
 		UNREFERENCED_PARAMETER(path);
 #endif
 	}
