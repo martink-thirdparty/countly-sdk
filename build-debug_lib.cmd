@@ -1,6 +1,6 @@
 robocopy "%MkBuildPath%\output\Debug Lib\x86\openssl\include\openssl" vanilla\src\openssl /MIR
 
-cmake -S vanilla -B %MkBuildPath%\intermediate\countly_sdk\debug_lib
+cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -S vanilla -A Win32 -T v142 -B %MkBuildPath%\intermediate\countly_sdk\debug_lib
 cmake -DBUILD_SHARED_LIBS:BOOL="0" -DCMAKE_INSTALL_PREFIX:PATH="%MkBuildPath%\output\Debug Lib\x86\countly_sdk" -DOPENSSL_ROOT_DIR:PATH="%MkBuildPath%\output\Debug Lib\x86\openssl" -DOPENSSL_INCLUDE_DIR:PATH="%MkBuildPath%\output\Debug Lib\x86\openssl\include" %MkBuildPath%\intermediate\countly_sdk\debug_lib
 cmake --build %MkBuildPath%\intermediate\countly_sdk\debug_lib --config Debug
 rem does nothing: cmake --install %MkBuildPath%\intermediate\countly_sdk\debug_lib --config Debug
